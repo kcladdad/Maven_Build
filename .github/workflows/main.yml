@@ -1,5 +1,5 @@
 name: Github Actions Demo
-run-name: Testing our basic Github actions workflow
+run-name: Testing our basic Github actions workflows
 
 on: [push]
 
