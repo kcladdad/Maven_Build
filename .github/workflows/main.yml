@@ -1,0 +1,17 @@
+name: Github Actions Demo
+run-name: Testing our basic Github actions workflow
+
+on: [push]
+
+jobs:
+  basic_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Print a message
+      - name: Print job execution message
+        run: echo "Job basic_workflow is executing as part of the new workflow"
+      
+      # Step 2: Trigger Jenkins job via curl
+      - name: Trigger Jenkins Job
+        run: |
+          curl -X GET "http://54.83.99.67:8080/job/MyJOB/build?token=my-token" --user "admin:11a7ca347c98720b2699b326198e87fd49"
